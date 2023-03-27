@@ -67,6 +67,7 @@ namespace AkbilYonetimiUI
                 if (rowsEffected > 0)
                 {
                     MessageBox.Show("KAYIT EKLENDİ !", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GirisFormunaGit();
                 }
                 else
                 {
@@ -81,6 +82,24 @@ namespace AkbilYonetimiUI
                 // ex log.txt'ye yazılanacak (loglama)
                 MessageBox.Show("Beklenmedik bir hata oluştu! Lütfen tekrar deneyiniz !");
             }
+        }
+
+        private void GirisFormunaGit()
+        {
+            FrmGiris frmG = new FrmGiris();
+            frmG.Email = txtEmail.Text.Trim();
+            this.Hide();
+            frmG.Show();
+        }
+
+        private void btnGirisYap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmKayitOl_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GirisFormunaGit();
         }
     }
 }

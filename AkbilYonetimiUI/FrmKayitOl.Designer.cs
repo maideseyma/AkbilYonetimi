@@ -134,6 +134,7 @@
             btnGirisYap.TabIndex = 10;
             btnGirisYap.Text = "GİRİŞ YAP";
             btnGirisYap.UseVisualStyleBackColor = true;
+            btnGirisYap.Click += btnGirisYap_Click;
             // 
             // btnKayitOl
             // 
@@ -173,6 +174,7 @@
             Controls.Add(label1);
             Name = "FrmKayitOl";
             Text = "FrmKayitOl";
+            FormClosed += FrmKayitOl_FormClosed;
             Load += FrmKayitOl_Load;
             ResumeLayout(false);
             PerformLayout();
